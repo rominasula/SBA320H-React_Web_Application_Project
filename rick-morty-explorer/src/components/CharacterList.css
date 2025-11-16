@@ -1,0 +1,38 @@
+/* src/components/CharacterList.css */
+.page {
+  margin-left: 220px; /* leave space for sidebar */
+  padding: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card button {
+  margin-top: 8px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}

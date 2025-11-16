@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from "react";
+// src/components/Favorites.js
+import React, { useContext } from "react";
+import { FavoritesContext } from "../context/FavoritesContext";
+import "./Favorites.css";
 
 export default function Favorites() {
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("favorites")) || [];
-    setFavorites(saved);
-  }, []);
+  const { favorites, removeFavorite } = useContext(FavoritesContext);
 
   return (
     <div className="page">
       <h1>Your Favorites</h1>
-
       {favorites.length === 0 ? (
-        <p>You don't have any favorites yet.</p>
+        <p>No favorites yet. Go add some!</p>
       ) : (
         <div className="cards">
           {favorites.map((char) => (
@@ -21,6 +18,8 @@ export default function Favorites() {
               <img src={char.image} alt={char.name} />
               <h3>{char.name}</h3>
               <p>{char.species}</p>
+              <p>{char.status}</p>
+              <button onClick={() => removeFavorite(char.id)}>Remove</button>
             </div>
           ))}
         </div>

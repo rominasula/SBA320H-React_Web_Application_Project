@@ -1,9 +1,17 @@
+// Sidebar.js
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Sidebar.css";
 
-export default function Sidebar({ children }) {
+export default function Sidebar() {
   return (
-    <div className="sidebar">
-      {children}
-    </div>
+    <nav className="sidebar">
+      <h2>Rick & Morty Explorer</h2>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/characters">Characters</Link></li>
+        <li><Link to="/favorites">Favorites</Link></li>
+      </ul>
+    </nav>
   );
 }
