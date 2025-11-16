@@ -11,7 +11,12 @@ const Header = ({ onSearch }) => {
   return (
     <header>
       <h1>Rick & Morty Explorer</h1>
-    
+      <input
+        type="text"
+        placeholder="Search characters..."
+        value={term}
+        onChange={handleChange}
+      />
     </header>
   );
 };
