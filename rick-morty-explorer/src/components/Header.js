@@ -1,21 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Header = ({ onSearch }) => {
-  const [term, setTerm] = useState("");
-
-  const handleChange = (e) => {
-    setTerm(e.target.value);
-    onSearch(e.target.value);
-  };
-
+const Header = ({ search, onSearch }) => {
   return (
-    <header>
-      <h1>Rick & Morty Explorer</h1>
+    <header className="header">
+      <h1 className="logo">Rick & Morty Explorer</h1>
+
       <input
         type="text"
+        className="search-input"
         placeholder="Search characters..."
-        value={term}
-        onChange={handleChange}
+        value={search}
+        onChange={(e) => onSearch(e.target.value)}
       />
     </header>
   );
