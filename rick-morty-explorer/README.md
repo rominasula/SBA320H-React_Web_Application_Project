@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Rick & Morty Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React web application that allows users to explore characters from the **Rick & Morty** universe using the public Rick & Morty API.  
+The app includes character search, filtering, and a Favorites system powered by React Context & useReducer.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Site
 
-### `npm start`
+Check it out here: [Rick & Morty Explorer](https://react-web-application-project.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Project Overview
 
-### `npm test`
+Rick & Morty Explorer is an interactive web app where users can:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Browse characters fetched from the public API  
+- View character images, species, gender, and status  
+- Add and remove characters from their favorites  
+- Navigate between pages using React Router  
+- See their favorites persist across page refresh (via Context or LocalStorage)
 
-### `npm run build`
+This project fulfills the requirements for the **SBA 320H - React Web Application Project**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend
+- React  
+- HTML  
+- CSS  
+- JavaScript  
+- React Router  
+- React Context + useReducer (for global favorites state)
 
-### `npm run eject`
+### API
+- Rick & Morty API  
+  Endpoint used: `https://rickandmortyapi.com/api/character`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Hosting
+- **Netlify** (for deployment)  
+- **GitHub** (version control)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚙️ Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Fetch characters using `fetch()` (AJAX request)  
+- Display API results in clean UI cards  
+- Sidebar navigation  
+- Add / remove favorites  
+- Favorites stored globally via Context  
+- Responsive layout  
+- Error handling for failed API calls  
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📁 File Structure 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+rick-morty-explorer/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Sidebar.js
+│   │   ├── CharacterList.js
+│   │   ├── CharacterCard.js
+│   │   ├── CharacterDetail.js
+│   │   └── Favorites.js
+│   ├── context/
+│   │   └── FavoritesContext.js
+│   ├── App.js
+│   ├── index.js
+│   └── App.css
+├── package.json
+└── README.md
 
-### Code Splitting
+## How to Run the Project Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone this repo  
+git clone https://github.com/rominasula/SBA320H-React_Web_Application_Project
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Install dependencies  
+npm install
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Start the development server  
+npm start
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Open in browser  
+http://localhost:3000
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🚧 Unsolved Problems / Future Enhancements
 
-### `npm run build` fails to minify
+- Add filters for species, status, or gender  
+- Add pagination support for API results  
+- Improve UI design for mobile screens  
+- Add dark mode toggle  
+- Persist favorites in localStorage  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+
+Created as part of the SBA320H-React_Web_Application_Project
+
+Created by **Romina Dervishi**  
+GitHub: [rominasula](https://github.com/rominasula)
+
+
